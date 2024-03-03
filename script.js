@@ -17,7 +17,7 @@ function splashButton() {
 };
 
 var klikSplash = new Audio('./assets/sounds/klikSplash.mp3');
-klikSplash.volume = 0.5;
+klikSplash.volume = 0.8;
 
 var bgMusic = new Audio('./assets/sounds/bgLagu.mp3');
 
@@ -42,7 +42,7 @@ async function playAfter(suatuFungsi, song) {
     }, 1200);
 
     function cekInterval() {
-      if (suara == 0.5) {
+      if (suara > 0.7) {
         clearInterval(intervalListener);
       }
     }
