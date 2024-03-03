@@ -1,0 +1,62 @@
+#splash {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./assets/bg1.png);
+  background-size: cover;
+  transition: all 1s ease;
+}
+
+#splash button {
+  text-transform: uppercase;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 2px 3px rgb(25, 25, 25);
+  background-color: var(--merah);
+  z-index: 1;
+}
+
+#splash button:focus {
+  animation: all 1s ease;
+  animation-name: tombolKeren;
+}
+@keyframes tombolKeren {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#splash-paper {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.337);
+  position: fixed;
+  z-index: 0;
+  backdrop-filter: blur(1.5px);
+}
+
+#splash h2 {
+  text-align: center;
+  z-index: 10;
+  color: #9f4039;
+  font-size: 3rem;
+  position: relative;
+  bottom: 4rem;
+  text-shadow: 2px 3px white;
+}
+
+#splash img {
+  z-index: 1;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.8;
+}
