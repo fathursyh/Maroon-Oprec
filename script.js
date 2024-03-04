@@ -14,9 +14,9 @@ function splashButton() {
   setTimeout(function () {
     splash2.style.display = 'flex';
     splash2.style.opacity = '100';
-  }, 2200);
+  }, 2600);
 
-  playAfter((fadeAway(splash2, 5400)), bgMusic);
+  playAfter((fadeAway(splash2, 5800)), bgMusic);
 };
 
 var klikSplash = new Audio('./assets/sounds/klikSplash.mp3');
@@ -66,7 +66,7 @@ async function fadeAway(objek, durations) {
   })
   await janji;
   if(durations < 1000) {
-     setTimeout(() => {(objek.style.display = 'none')}, durations*2);
+     setTimeout(() => {(objek.style.display = 'none')}, durations*2.8);
   } else {
      setTimeout(() => {(objek.style.display = 'none')}, durations*1.2)
   }
@@ -85,4 +85,22 @@ function hideNav() {
     
   }
 };
+var alertMessage = document.getElementById('alert');
+var bgAlert = document.getElementById('pop-up');
+function showAlert() {
+  bgAlert.style.display = 'block';
+  alertMessage.classList.remove("hidden2");
+};
 
+var pause = false;
+function pauseMusic() {
+  if (!pause) {
+    bgMusic.pause();
+    pause = true;
+    document.querySelector('#alert p').innerHTML = 'Mainkan musik';
+  } else {
+    bgMusic.play();
+    pause = false;
+    document.querySelector('#alert p').innerHTML = 'Hentikan musik';
+  }
+};

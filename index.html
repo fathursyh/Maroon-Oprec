@@ -30,15 +30,15 @@
 </head>
 <body>
   <nav class="hidden">
-    <img src="./assets/burger.png" alt="" height="22%" style="opacity: 0.8;">
+    <img src="./assets/burger.png" alt="" height="22%" style="opacity: 0.8; border-radius: 50%;">
     <h3>EP 1 - Oprec 2024</h3>
-    <div aria-label="3 dots" id="dots">
+    <div aria-label="3 dots" id="dots" onclick="showAlert()">
       <div class="dot"></div>
       <div class="dot"></div>
       <div class="dot"></div>
     </div>
   </nav>
-  <section id="splash" data-aos="zoom-out" data-aos-delay="2000">
+  <section id="splash" data-aos="zoom-out">
     <div id="splash-paper"></div>
     <h2 data-aos="fade-up" data-aos-delay="1000">OPEN RECRUITMENT</h2>
     <button data-aos="zoom" data-aos-delay="2200" onclick="splashButton()">Saya tertarik!</button>
@@ -52,6 +52,10 @@
   <main id="main-content" >
     <div></div>
   </main>
+  <div id="pop-up"></div>
+  <div id="alert" class="hidden2">
+    <p onclick="pauseMusic()">Hentikan musik</p>
+  </div>
 
   <div id="bottomBar" class="hidden2">
 
@@ -81,6 +85,11 @@
     
     document.getElementById('main-content').ontouchstart = function() {
       hideNav();
+    };
+    
+    bgAlert.ontouchstart = function() {
+      alertMessage.classList.add("hidden2");
+      bgAlert.style.display = "none";
     };
   
   </script>
