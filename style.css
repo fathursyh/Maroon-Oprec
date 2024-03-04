@@ -1,5 +1,8 @@
 :root {
   --merah: #9f4039;
+  --klik: rgba(217, 217, 217, 0.475);
+  --putih: rgb(226, 226, 226);
+  --bar: rgb(59, 51, 51);
 }
 
 * {
@@ -16,15 +19,81 @@ html, body {
   transition-duration: 1s;
 }
 
-.background {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-
-
 @media screen and (min-width: 450px) {
   body {
     display: none;
   }
 }
+
+nav {
+  transform: translateY(0);display: flex;width: 94%;z-index: 100;flex-flow: row nowrap;background-color: rgb(59, 51, 51);
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  gap: 5%;
+  transition: all 0.5s linear;
+} nav img {height: 22%; opacity: 0.8;}
+
+nav h3 {
+  color: rgb(187, 184, 184);
+  position: relative;
+  letter-spacing: 1.5px;
+  margin-right: auto;
+  text-transform: uppercase;
+}
+
+#dots {
+  padding: 4px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#dots:active {background-color: var(--klik);}
+
+.dot {
+  height: 4px;
+  width: 4px;
+  background-color: rgb(200, 194, 194);
+  margin: 2px 0;
+
+}
+
+#main-content {
+  display: none;
+  flex-flow: column nowrap;
+  opacity: 1;
+  width: 100%;
+  height: 4000px;
+  transition: all 1s linear forwards;
+  background-color: var(--putih);
+}
+
+.hidden {
+  transform: translateY(-100px) !important;
+}
+.hidden2 {
+  transform: translateY(80px) !important;
+}
+
+#bottomBar {
+  transform: translateY(0);
+  transition: all 0.5s linear;
+  display: flex;
+  height: 7.5vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 0 1rem;
+  background-color: var(--bar);
+  z-index: 100;
+}
+
+

@@ -1,5 +1,8 @@
 var splash = document.getElementById('splash');
 var splash2 = document.querySelector('#splash2');
+var nav = document.querySelector('nav');
+var bottom = document.getElementById('bottomBar');
+var hidden = true;
 function splashButton() {
   klikSplash.play();
   fadeAway(splash, 400);
@@ -20,14 +23,9 @@ var klikSplash = new Audio('./assets/sounds/klikSplash.mp3');
 klikSplash.volume = 0.8;
 
 var bgMusic = new Audio('./assets/sounds/bgLagu.mp3');
+bgMusic.loop = true;
 
-async function fadeAway(objek, durations) {
-  let janji = new Promise((resolve) => {
-    setTimeout(() => resolve(objek.style.opacity = '0'), durations);
-  })
-  await janji;
-  setTimeout(() => {(objek.style.display = 'none')}, durations*2);
-};
+
 
 async function playAfter(suatuFungsi, song) {
   await suatuFungsi;
@@ -48,4 +46,43 @@ async function playAfter(suatuFungsi, song) {
     }
 
   }, 2000)
+  setTimeout(function () {
+    document.querySelector("body").style.backgroundColor = "rgb(226, 226, 226)";
+    document.querySelector("body").style.transitionDuration = "1.5s";
+    setTimeout(function () {
+      document.getElementById('main-content').style.display = 'flex';
+      nav.classList.remove('hidden');
+      bottom.classList.remove('hidden2');
+    }, 1000);
+    
+  }, 6000);
+
 }
+
+
+async function fadeAway(objek, durations) {
+  let janji = new Promise((resolve) => {
+    setTimeout(() => resolve(objek.style.opacity = '0'), durations);
+  })
+  await janji;
+  if(durations < 1000) {
+     setTimeout(() => {(objek.style.display = 'none')}, durations*2);
+  } else {
+     setTimeout(() => {(objek.style.display = 'none')}, durations*1.2)
+  }
+ 
+};
+
+function hideNav() {
+  if (hidden) {
+    nav.classList.add("hidden");
+    bottom.classList.add('hidden2');
+    hidden = false;
+  } else {
+    nav.classList.remove("hidden");
+    bottom.classList.remove('hidden2');
+    hidden = true;
+    
+  }
+};
+
