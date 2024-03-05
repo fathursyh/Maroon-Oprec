@@ -31,7 +31,6 @@ async function playAfter(suatuFungsi, song) { // FUNGSI PLAY AFTER *************
   await suatuFungsi;
   
     let suara = 0.1
-    console.log('suatu Fungsi');
     song.play();
     song.volume = suara;
     var intervalListener = setInterval(function () {
@@ -114,6 +113,8 @@ window.addEventListener('blur', function() {
 }, false);
 window.addEventListener('focus', function() {
   if(mainContent) {
-    bgMusic.play();
+    if (!pause) {
+      bgMusic.play();
+    }
   }
 }, false);
