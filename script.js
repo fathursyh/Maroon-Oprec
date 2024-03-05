@@ -104,21 +104,9 @@ function pauseMusic() {
   }
 };
 
-document.addEventListener("onDeviceReady", function () {
-  // Adds pause event
-  document.addEventListener("pause", manageAppPause);
-  // Adds resume event
-  document.addEventListener("resume", manageAppResume);
-});
-
-function manageAppPause() {
-  // Check if audio is playing
-  // If it is, pause it
-  pauseMusic();
-}
-
-function manageAppResume() {
-  // If you want, check if the audio was playing before the app was put into the background
-  // If so, resume audio
-  pauseMusic();
-}
+window.addEventListener('blur', function() {
+  bgMusic.pause();
+}, false);
+window.addEventListener('focus', function() {
+  bgMusic.play();
+}, false);
