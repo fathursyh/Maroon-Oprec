@@ -35,7 +35,7 @@ async function playAfter(suatuFungsi, song) {
       suara += 0.1;
       song.volume = suara;
       cekInterval();
-    }, 1200);
+    }, 1000);
 
     function cekInterval() {
       if (suara > 0.7) {
@@ -56,7 +56,7 @@ async function playAfter(suatuFungsi, song) {
       bottom.classList.remove('hidden2');
     }, 1000);
 
-  }, 6000);
+  }, 1400);
 
 }
 
