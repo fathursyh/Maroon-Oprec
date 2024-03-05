@@ -48,7 +48,10 @@ async function playAfter(suatuFungsi, song) {
     document.querySelector("body").style.backgroundColor = "rgb(226, 226, 226)";
     document.querySelector("body").style.transitionDuration = "1.5s";
     setTimeout(function () {
-      document.getElementById('main-content').style.display = 'flex';
+      document.getElementById('main-content').style.display = "flex";
+      setTimeout(function () {
+        document.getElementById('main-content').classList.remove('hidden2');
+      }, 400);
       nav.classList.remove('hidden');
       bottom.classList.remove('hidden2');
     }, 1000);
