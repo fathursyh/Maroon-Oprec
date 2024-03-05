@@ -68,7 +68,7 @@ async function fadeAway(objek, durations) {
   if (durations < 1000) {
     setTimeout(() => { (objek.style.display = 'none') }, durations * 2.8);
   } else {
-    setTimeout(() => { (objek.style.display = 'none') }, durations * 1.2)
+    setTimeout(() => { (objek.style.display = 'none') }, durations * 0.5)
   }
 
 };
