@@ -5,6 +5,7 @@ var bottom = document.getElementById('bottomBar');
 var hidden = true;
 var pause = false;
 var mainContent = false;
+console.log('tes');
 function splashButton() {
   klikSplash.play();
   fadeAway(splash, 400);
