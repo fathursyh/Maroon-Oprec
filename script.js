@@ -25,10 +25,11 @@ klikSplash.volume = 0.8;
 var bgMusic = new Audio('./assets/sounds/bgLagu.mp3');
 bgMusic.loop = true;
 
-async function playAfter(suatuFungsi, song) {
+async function playAfter(suatuFungsi, song) { // FUNGSI PLAY AFTER ****************************
   await suatuFungsi;
-  setTimeout(function () {
+  
     let suara = 0.1
+    console.log('suatu Fungsi');
     song.play();
     song.volume = suara;
     var intervalListener = setInterval(function () {
@@ -42,15 +43,13 @@ async function playAfter(suatuFungsi, song) {
         clearInterval(intervalListener);
       }
     }
-
-  }, 2000)
   setTimeout(function () {
     document.querySelector("body").style.backgroundColor = "rgb(226, 226, 226)";
     document.querySelector("body").style.transitionDuration = "1.5s";
     setTimeout(function () {
       document.getElementById('main-content').style.display = "flex";
       setTimeout(function () {
-        document.getElementById('main-content').classList.remove('hidden2');
+        document.getElementById('main-content').classList.remove('hidden2'); // last 
       }, 400);
       nav.classList.remove('hidden');
       bottom.classList.remove('hidden2');
@@ -60,7 +59,7 @@ async function playAfter(suatuFungsi, song) {
 
 }
 
-async function fadeAway(objek, durations) {
+async function fadeAway(objek, durations) { // FUNGSI FADEAWAY ********************************
   let janji = new Promise((resolve) => {
     setTimeout(() => resolve(objek.style.opacity = '0'), durations);
   })
@@ -104,3 +103,22 @@ function pauseMusic() {
     document.querySelector('#alert p').innerHTML = 'Hentikan musik';
   }
 };
+
+document.addEventListener("onDeviceReady", function () {
+  // Adds pause event
+  document.addEventListener("pause", manageAppPause);
+  // Adds resume event
+  document.addEventListener("resume", manageAppResume);
+});
+
+function manageAppPause() {
+  // Check if audio is playing
+  // If it is, pause it
+  pauseMusic();
+}
+
+function manageAppResume() {
+  // If you want, check if the audio was playing before the app was put into the background
+  // If so, resume audio
+  pauseMusic();
+}
