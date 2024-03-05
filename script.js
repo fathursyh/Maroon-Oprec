@@ -3,6 +3,8 @@ var splash2 = document.querySelector('#splash2');
 var nav = document.querySelector('nav');
 var bottom = document.getElementById('bottomBar');
 var hidden = true;
+var pause = false;
+var mainContent = false;
 function splashButton() {
   klikSplash.play();
   fadeAway(splash, 400);
@@ -49,7 +51,8 @@ async function playAfter(suatuFungsi, song) { // FUNGSI PLAY AFTER *************
     setTimeout(function () {
       document.getElementById('main-content').style.display = "flex";
       setTimeout(function () {
-        document.getElementById('main-content').classList.remove('hidden2'); // last 
+        document.getElementById('main-content').classList.remove('hidden2');
+        mainContent = true; // last 
       }, 400);
       nav.classList.remove('hidden');
       bottom.classList.remove('hidden2');
@@ -91,7 +94,7 @@ function showAlert() {
   alertMessage.classList.remove("hidden2");
 };
 
-var pause = false;
+
 function pauseMusic() {
   if (!pause) {
     bgMusic.pause();
@@ -105,8 +108,12 @@ function pauseMusic() {
 };
 
 window.addEventListener('blur', function() {
-  bgMusic.pause();
+  if(mainContent) {
+    bgMusic.pause();
+  }  
 }, false);
 window.addEventListener('focus', function() {
-  bgMusic.play();
+  if(mainContent) {
+    bgMusic.play();
+  }
 }, false);
