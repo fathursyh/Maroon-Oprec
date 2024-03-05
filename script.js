@@ -10,7 +10,7 @@ function splashButton() {
   setTimeout(function () {
     document.querySelector('body').style.backgroundColor = 'black';
   }, 1200);
-  
+
   setTimeout(function () {
     splash2.style.display = 'flex';
     splash2.style.opacity = '100';
@@ -25,14 +25,12 @@ klikSplash.volume = 0.8;
 var bgMusic = new Audio('./assets/sounds/bgLagu.mp3');
 bgMusic.loop = true;
 
-
-
 async function playAfter(suatuFungsi, song) {
   await suatuFungsi;
-  setTimeout(function (){
+  setTimeout(function () {
     let suara = 0.1
     song.play();
-    song.volume = suara;  
+    song.volume = suara;
     var intervalListener = setInterval(function () {
       suara += 0.1;
       song.volume = suara;
@@ -54,23 +52,22 @@ async function playAfter(suatuFungsi, song) {
       nav.classList.remove('hidden');
       bottom.classList.remove('hidden2');
     }, 1000);
-    
+
   }, 6000);
 
 }
-
 
 async function fadeAway(objek, durations) {
   let janji = new Promise((resolve) => {
     setTimeout(() => resolve(objek.style.opacity = '0'), durations);
   })
   await janji;
-  if(durations < 1000) {
-     setTimeout(() => {(objek.style.display = 'none')}, durations*2.8);
+  if (durations < 1000) {
+    setTimeout(() => { (objek.style.display = 'none') }, durations * 2.8);
   } else {
-     setTimeout(() => {(objek.style.display = 'none')}, durations*1.2)
+    setTimeout(() => { (objek.style.display = 'none') }, durations * 1.2)
   }
- 
+
 };
 
 function hideNav() {
@@ -82,7 +79,7 @@ function hideNav() {
     nav.classList.remove("hidden");
     bottom.classList.remove('hidden2');
     hidden = true;
-    
+
   }
 };
 var alertMessage = document.getElementById('alert');

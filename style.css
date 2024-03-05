@@ -79,9 +79,13 @@ nav h3 {
 #bottomBar {
   transition: all 0.5s linear;
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 0.5rem;
   height: 7.5vh;
-  width: 100%;
+  width: 94%;
   position: fixed;
+  align-items: center;
   bottom: 0;
   padding: 0 1rem;
   background-color: var(--bar);
@@ -91,7 +95,8 @@ nav h3 {
 #alert {
   transition: all linear;
   transition-duration: 0.3s;
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 2rem 0;
   height: 8vh;
   width: 100%;
@@ -128,4 +133,53 @@ nav h3 {
   transform: translateY(80px);
   visibility: hidden;
   opacity: 0;
+}
+
+#comment, #like {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+#like {margin-right: auto;}
+
+#comment img {
+  height: 20px;
+  margin-right: 5px;
+}
+#like img {
+  height: 30px;
+  margin-right: 1px;
+  
+}
+
+#like, #comment p {
+  color: rgba(255, 255, 255, 0.865);
+  letter-spacing: 1px;
+}
+
+#arrows {
+  margin-right: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.arrow {
+  border: solid rgba(255, 255, 255, 0.865);
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }
