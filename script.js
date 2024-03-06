@@ -5,7 +5,6 @@ var bottom = document.getElementById('bottomBar');
 var hidden = true;
 var pause = false;
 var mainContent = false;
-console.log('tes');
 function splashButton() {
   klikSplash.play();
   fadeAway(splash, 400);
@@ -27,6 +26,7 @@ klikSplash.volume = 0.8;
 
 var bgMusic = new Audio('./assets/sounds/bgLagu.mp3');
 bgMusic.loop = true;
+bgMusic.muted = true;
 
 async function playAfter(suatuFungsi, song) { // FUNGSI PLAY AFTER ****************************
   await suatuFungsi;
