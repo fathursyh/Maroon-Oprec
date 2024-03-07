@@ -11,12 +11,24 @@
   top: 95vh;
   width: 68%;
 }
-#nopal-2 {
-  top: 115vh;
+
+#nopalCalvin {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
   width: 100%;
+  justify-content: start;
+  align-items: end;
+  height: 50vh;
+  top: 115vh;
+}
+
+#nopal-2 {
+  width: 100%;
+
 }
 #calvin-1 {
-  z-index: 100;
-  top: 5.6%;
-  left: 10%;
+  position: absolute;
+  top: 47vw;
+
 }
