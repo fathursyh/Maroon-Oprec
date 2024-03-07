@@ -75,6 +75,7 @@ nav h3 {
   height: 8000px;
   transition: all 1s ease;
   background-color: var(--putih);
+  scroll-behavior: smooth;
 }
 
 #main-content h1 {
