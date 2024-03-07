@@ -9,7 +9,8 @@ window.addEventListener("scroll", () => {
   myElement.forEach((item) => {
     if (inViewport(item)) {
       item.classList.remove("hidden3");
-      item.classList.remove("hidden4");
+    } else {
+      item.classList.add("hidden3");
     }
   });
 }, true);

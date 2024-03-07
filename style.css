@@ -146,10 +146,8 @@ nav h3 {
   visibility: hidden;
   opacity: 0;
 }
-.hidden4 {
+.hidden3:nth-child(odd) {
   transform: translateX(-80px);
-  visibility: hidden;
-  opacity: 0;
 }
 
 #comment, #like {
