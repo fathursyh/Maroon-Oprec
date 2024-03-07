@@ -140,6 +140,11 @@ nav h3 {
   visibility: hidden;
   opacity: 0;
 }
+.hidden3 {
+  transform: translateY(100px);
+  visibility: hidden;
+  opacity: 0;
+}
 
 #comment, #like {
   display: flex;
