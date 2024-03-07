@@ -11,3 +11,12 @@
   top: 95vh;
   width: 68%;
 }
+#nopal-2 {
+  top: 115vh;
+  width: 100%;
+}
+#calvin-1 {
+  z-index: 100;
+  top: 449px;
+  left: 10%;
+}
