@@ -1,6 +1,5 @@
 function inViewport(element) {
   var posisi = element.getBoundingClientRect();
-  // cek posisi pas element udah 20% atau 0.2 keliatan
   return !(posisi.top > innerHeight * 0.6 || posisi.bottom < 0);
 }
 
