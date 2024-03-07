@@ -28,6 +28,7 @@ klikSplash.volume = 0.5;
 var bgMusic = new Audio('./assets/sounds/bgLagu.mp3');
 bgMusic.loop = true;
 // bgMusic.muted = true;
+// bgMusic.muted = true;
 
 async function playAfter(suatuFungsi, song) { // FUNGSI PLAY AFTER ****************************
   await suatuFungsi;
