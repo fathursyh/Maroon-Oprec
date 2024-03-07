@@ -1,10 +1,13 @@
 .komik {
   width: 80%;
   position: relative;
-  opacity: 1;
   transition: all 0.6s ease;
-  top: 90vh 
 }
 
-#nopal1 {
+#nopal-1 {
+  top: 100vh;
+}
+#balon-1 {
+  top: 95vh;
+  width: 70%;
 }
