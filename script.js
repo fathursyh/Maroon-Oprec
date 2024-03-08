@@ -22,10 +22,10 @@ function splashButton() {
 
 var klikSplash = new Audio('./assets/sounds/klikSplash.mp3');
 klikSplash.volume = 0.5;
-// klikSplash.muted = true;
+klikSplash.muted = true;
 
 var bgMusic = new Audio('./assets/sounds/bgLagu.mp3');
-// bgMusic.muted = true;
+bgMusic.muted = true;
 
 async function playAfter(suatuFungsi, song) { // FUNGSI PLAY AFTER ****************************
   await suatuFungsi;
@@ -118,3 +118,18 @@ window.addEventListener('focus', function() {
     }
   }
 }, false);
+
+var liked = false;
+function like() {
+  if (!liked) {
+    document.querySelector('#like img').src = './assets/loved.png';
+    document.querySelector('#like img').classList.add('liked');
+    document.querySelector('#like p').innerHTML = '314.931';
+    liked = true;
+  } else {
+    document.querySelector('#like img').src = './assets/love.png';
+    document.querySelector('#like img').classList.remove('liked');
+    document.querySelector('#like p').innerHTML = '314.930';
+    liked = false;
+  }
+}

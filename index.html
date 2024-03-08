@@ -52,7 +52,7 @@
   </section>
   <!-- MAIN SITE -->
   <main id="main-content" class="hidden2">
-    <h1>SCROLL AKU</h1>
+    <h1>SCROLL ME!</h1>
     <img src="./assets/maroon/naufal1.png" alt="" class="komik hidden3" id="nopal-1" >
     <img src="./assets/maroon/balon nopal1.png" alt="" class="komik hidden3" id="balon-1" >
     <div id="nopalCalvin">
@@ -68,7 +68,7 @@
   <!-- Bottom Bar -->
   <div id="bottomBar" class="hidden2">
     <div id="like">
-      <img src="./assets/love.png" alt="">
+      <img src="./assets/love.png" alt="" onclick="like()">
       <p>314.930</p>
     </div>
     <div id="comment">
@@ -76,8 +76,8 @@
       <p>53.129</p>
     </div>
     <div id="arrows">
-      <p><i class="arrow left"></i></p>
-      <p><i class="arrow right"></i></p>
+      <p><i class="arrow left" onclick="backToTop()"></i></p>
+      <p><i class="arrow right" onclick="scrollToBottom()"></i></p>
     </div>
   </div>
 
@@ -111,6 +111,16 @@
       alertMessage.classList.add("hidden2");
       bgAlert.style.display = "none";
     };
+
+    window.history.scrollRestoration = 'manual';
+
+    function backToTop() {
+      document.body.scrollTo(({top: 0, behavior:'smooth'}));
+    }
+    function scrollToBottom() {
+      var bottomPage = document.getElementById('main-content').offsetHeight;
+      document.body.scrollTo(({top: bottomPage, behavior:'smooth'}));
+    }
 
   </script>
 </body>
