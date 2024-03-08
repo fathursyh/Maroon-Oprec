@@ -8,7 +8,6 @@ var mainContent = false;
 function splashButton() {
   klikSplash.play();
   fadeAway(splash, 400);
-
   setTimeout(function () {
     document.querySelector('body').style.backgroundColor = 'black';
   }, 1200);
