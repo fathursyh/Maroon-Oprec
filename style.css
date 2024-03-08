@@ -81,6 +81,7 @@ nav h3 {
 #main-content h1 {
   position: relative;
   top: 45vh;
+  color: var(--bar);
 }
 
 #bottomBar {

@@ -1,5 +1,5 @@
 .komik {
-  width: 80%;
+  width: 100%;
   position: relative;
   transition: all 0.6s ease;
 }
@@ -29,6 +29,7 @@
 }
 #calvin-1 {
   position: absolute;
-  top: 47vw;
+  top: 46.5vw;
+  width: 80%;
 
 }
