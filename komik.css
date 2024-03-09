@@ -31,5 +31,27 @@
   position: absolute;
   top: 46.7vw;
   width: 80%;
+}
 
+#nopalSyahrin {
+  position: relative;
+  top: 1350px;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: start;
+}
+
+#nopal-3 {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+#syahrin-1 {
+  position: absolute;
+  top: 43.3vw;
+  width: 62.7%;
+  z-index: 2;
 }

@@ -59,6 +59,10 @@
       <img src="./assets/maroon/naufal2.png" alt="" class="komik hidden3" id="nopal-2">
       <img src="./assets/maroon/calvin1.png" alt="" class="komik hidden3" id="calvin-1">
     </div>
+    <div id="nopalSyahrin">
+      <img src="./assets/maroon/syahrin.png" alt="" class="komik hidden3" id="syahrin-1">
+      <img src="./assets/maroon/naufal3.png" alt="" class="komik hidden3" id="nopal-3">
+    </div>
   </main>
   <!-- Alert Menu -->
   <div id="pop-up"></div>
@@ -115,11 +119,12 @@
     window.history.scrollRestoration = 'manual';
 
     function backToTop() {
-      document.body.scrollTo(({top: 0, behavior:'smooth'}));
+      document.body.scrollTo(({top: 0, behavior:'instant'}));
     }
     function scrollToBottom() {
       var bottomPage = document.getElementById('main-content').offsetHeight;
-      document.body.scrollTo(({top: bottomPage, behavior:'smooth'}));
+      document.body.scrollTo(({top: bottomPage, behavior:'instant'}));
+      document.getElementById('main-content').style.backgroundColor = "#9f4039";
     }
 
   </script>
