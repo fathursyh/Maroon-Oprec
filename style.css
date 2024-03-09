@@ -76,7 +76,7 @@ nav h3 {
   transition: all 1s ease;
   background-color: var(--putih);
   scroll-behavior: smooth;
-  gap: 5%;
+  gap: 5.5%;
 }
 
 #main-content h1 {
