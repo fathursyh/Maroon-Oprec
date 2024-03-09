@@ -4,12 +4,25 @@
   transition: all 0.6s ease;
 }
 
+#nopalAlone {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  height: 50vh;
+  margin-top: 135%;
+}
+
 #nopal-1 {
-  top: 100vh;
+  position: absolute;
 }
 #balon-1 {
-  top: 95vh;
-  width: 68%;
+  position: absolute;
+  top: 105vw;
+  right: 29vw;
+  width: 65%;
 }
 
 #nopalCalvin {
@@ -20,7 +33,6 @@
   justify-content: start;
   align-items: end;
   height: 50vh;
-  top: 115vh;
 }
 
 #nopal-2 {
@@ -35,12 +47,11 @@
 
 #nopalSyahrin {
   position: relative;
-  top: 1350px;
-  height: 400px;
+  height: 47vh;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
 }
 
@@ -51,7 +62,7 @@
 }
 #syahrin-1 {
   position: absolute;
-  top: 43.3vw;
+  top: 54vw;
   width: 62.7%;
   z-index: 2;
 }
