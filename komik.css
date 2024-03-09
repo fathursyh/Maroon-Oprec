@@ -66,4 +66,33 @@
   top: 54vw;
   width: 62.7%;
   z-index: 2;
+  transition: all 1s ease;
 }
+
+#nopalLailiHesti {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  height: 50vh;
+  /* background-color: blue; */
+}
+#nopal-4 {
+  border-bottom: 0.15rem solid black;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 1vw;
+}
+
+#lailiHesti {
+  display: flex;
+  gap: 5vw;
+} 
+
+#laili-1, #hesti-1 {
+  width: 47.5%;
+  bottom: 72.5vw;
+  transition: all 1.2s ease-in;
+} #balon-2 {width: 55%; position: absolute; top: 120vw; left: 28vw;}
