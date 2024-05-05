@@ -22,10 +22,10 @@ function splashButton() {
 
 var klikSplash = new Audio('./assets/sounds/klikSplash.mp3');
 klikSplash.volume = 0.5;
-klikSplash.muted = true;
+// klikSplash.muted = true;
 
 var bgMusic = new Audio('./assets/sounds/bgLagu.mp3');
-bgMusic.muted = true;
+// bgMusic.muted = true;
 
 async function playAfter(suatuFungsi, song) { // FUNGSI PLAY AFTER ****************************
   await suatuFungsi;

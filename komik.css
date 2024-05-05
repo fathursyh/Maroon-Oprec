@@ -100,12 +100,12 @@
   display: flex;
   position: relative;
   flex-flow: column nowrap;
-  padding-top: 40dvw;
-  padding-bottom: 55dvw;
+  padding-top: 35dvw;
+  padding-bottom: 42dvw;
 }
 
 .balon {
-  width: 55%; z-index: 10;
+  width: 50%; z-index: 10;
   position: absolute;
   left: 28vw;
 }
@@ -114,4 +114,13 @@
   top: 0; left: 8vw;
 } #balon-4 {
   bottom: 0; left: 28vw;
+}
+
+#fathurNiki {
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  padding-bottom: 40dvw;
+} #balon-5 {
+  bottom: 0;
 }
