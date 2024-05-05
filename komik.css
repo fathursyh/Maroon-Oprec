@@ -77,7 +77,6 @@
   justify-content: start;
   align-items: center;
   height: 50vh;
-  /* background-color: blue; */
 }
 #nopal-4 {
   border-bottom: 0.15rem solid black;
@@ -96,3 +95,23 @@
   bottom: 72.5vw;
   transition: all 1.2s ease-in;
 } #balon-2 {width: 55%; position: absolute; top: 120vw; left: 28vw;}
+
+#nopalCaesar {
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  padding-top: 40dvw;
+  padding-bottom: 55dvw;
+}
+
+.balon {
+  width: 55%; z-index: 10;
+  position: absolute;
+  left: 28vw;
+}
+
+#balon-3 {
+  top: 0; left: 8vw;
+} #balon-4 {
+  bottom: 0; left: 28vw;
+}
