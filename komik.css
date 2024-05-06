@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .komik {
   width: 100%;
   position: relative;
@@ -123,4 +125,43 @@
   padding-bottom: 40dvw;
 } #balon-5 {
   bottom: 0;
+}
+
+#video {
+  width: 100%;
+  min-height: 70dvh;
+  background-color: blue;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100%);
+}
+#video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#video h2 {
+  font-weight: bolder;
+  font-family: poppins;
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  text-align: center;
+  color: white;
+  z-index: 10;
+  font-size: x-large;
+  background-color: rgba(0, 0, 0, 0.537);
+  padding: 5% 0;
+  width: 100dvw;
+}
+
+#footer {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  color: rgba(255, 255, 255, 0.537);
+  font-size: x-small;
 }

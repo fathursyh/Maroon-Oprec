@@ -68,10 +68,19 @@
     <div id="fathurNiki">
       <img src="./assets/maroon/fathurNiki.png" alt="" class="komik hidden3">
       <img src="./assets/maroon/balon fathurNiki.png" alt="" class="komik hidden3 balon" id="balon-5">
-      
+    </div>
+    <div id="video">
+      <h2>Kalau begitu,<br>ayo bergabung!</h2>
+      <video src="./assets/maroon/marun.mp4" autoplay muted loop></video>
     </div>
 
+    <a href="https://bit.ly/3xZ2jgo">
+      <img src="./assets/maroon/Poster Web.svg" alt="" style="width: 100%;">
+    </a>
+
+    <p id="footer">&#169;</p>
   </main>
+
   <!-- Alert Menu -->
   <div id="pop-up"></div>
   <div id="alert" class="hidden2">
@@ -134,6 +143,10 @@
       document.getElementById('main-content').style.backgroundColor = "#9f4039";
     }
 
+    let footer = document.getElementById('footer');
+    const now = new Date();
+    const year = now.getFullYear();
+    footer.textContent += year + ' Maroon 22 - made with ❤ by Fathur';
   </script>
 </body>
 </html>
