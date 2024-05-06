@@ -161,7 +161,8 @@
   width: 100%;
   text-align: center;
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
+  margin-bottom: 5px;
   color: rgba(255, 255, 255, 0.537);
   font-size: x-small;
 }
